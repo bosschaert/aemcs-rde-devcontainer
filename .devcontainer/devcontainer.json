@@ -1,0 +1,21 @@
+{
+	// "build": { "dockerfile": "Dockerfile" },
+	"image": "docker.io/bosschaert/rde_dc:latest",
+
+
+	// "features": {
+	// 	"ghcr.io/devcontainers/features/java:1": {
+	// 		"version": "none",
+	// 		"installMaven": "true",
+	// 		"installGradle": "false"
+	// 	}
+	// },
+
+	"customizations": {
+	  "vscode": {
+		"extensions": ["dbaeumer.vscode-eslint"]
+	  }
+	},
+
+	"forwardPorts": [3000]
+  }
