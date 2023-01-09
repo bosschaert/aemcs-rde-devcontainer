@@ -22,4 +22,12 @@ RUN cd /opt/maven && \
 ENV JAVA_HOME=
 ENV PATH=/opt/maven/apache-maven-3.8.6/bin:$PATH
 
-
+RUN cd && mkdir temp && cd temp && mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.2.1:generate \
+  -D archetypeGroupId=com.adobe.aem \
+  -D archetypeArtifactId=aem-project-archetype \
+  -D archetypeVersion=39 \
+  -D appTitle="Cache Prime" \
+  -D appId="cacheprime" \
+  -D groupId="com.adobe.cacheprime" && \
+  cd ~/temp/cacheprime && \
+  mvn install && rm -rf ~/temp && rm -rf ~/.m2/repository/com/adobe/cacheprime

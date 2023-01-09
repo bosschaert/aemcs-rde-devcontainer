@@ -1,6 +1,6 @@
 {
 	// "build": { "dockerfile": "Dockerfile" },
-	"image": "docker.io/bosschaert/rde_dc:latest",
+	"image": "docker.io/bosschaert/rde_dc:2",
 
 
 	// "features": {
